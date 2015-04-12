@@ -1,0 +1,65 @@
+<h3 align="center">Name of the society</h3>
+<div class = "container-fluid">
+<div class = "col-md-3"></div>
+<div class = "col-md-4 col-md-offset-1">
+	<!-- <form class = 'form-control'> -->
+	<form ng-controller = 'billCtrl' ng-submit=addUser(post)>
+		<div class="form-inline">
+		<input type="text" class="form-control" ng-model="post.name" placeholder="Name"/>
+		<input type="text" class="form-control pull-right" ng-model="post.flat" placeholder="Flat no"/>
+		</div>
+		<br/>
+		<div>
+		<input type="email" class="form-control" ng-model="" placeholder="Address"/>
+		</div><br/>
+		<div class="form-inline">
+		<!-- <input type="text" class="form-control" ng-model="post.year" placeholder="Year"/> -->
+		<!-- <label>Year:&nbsp</label><select ng-model='post.year' placeholder='Year' class = 'form-control'>
+			<option>2012</option>
+			<option>2013</option>
+			<option>2014</option>
+			<option>2015</option>
+			<option>2016</option>
+		</select> -->
+		<label>Year:&nbsp</label>
+		<select ng-model='post.year' placeholder='Year' class = 'form-control'>
+			<option>2007</option>
+			<option>2008</option>
+			<option>2009</option>
+			<option>2010</option>
+			<option>2011</option>
+			<option>2012</option>
+			<option>2013</option>
+			<option>2014</option>
+			<option>2015</option>
+			<option>2016</option>
+		</select>
+		<input type="text" class="form-control pull-right" ng-model="post.month" placeholder="Month"/>
+		
+		</div><br/>
+		
+		<input type="text" class="form-control" ng-model="post.part1" placeholder="Maintenance"/><br/>
+		<input type="text" class="form-control" ng-model="post.part2" placeholder="Late payment charges"/><br/>
+		<input type="text" class="form-control" ng-model="post.part3" placeholder="Miscellaneous charges"/><br/>
+		<input type="text" class="form-control" ng-model="post.part4"/><br/>
+		<input type="text" class="form-control" ng-model="post.part5"/><br/>
+
+
+		<div class ="form-inline">
+			<label>Grand total: </label><input type="text" ng-model="post.total" class="form-control pull-right"/>
+		</div>
+		
+		<br/><br/>
+		<div class="form-inline">
+			<button class='btn btn-success'>Submit</button>
+			<button class='btn btn-danger pull-right'>Cancel</button>
+		</div>
+		<br/>
+	</form>
+
+
+</div>
+<div class = "col-md-3 col-md-offset-1"></div>
+
+
+</div>
