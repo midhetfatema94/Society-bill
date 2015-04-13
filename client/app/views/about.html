@@ -1,0 +1,47 @@
+<div class = 'container-fluid'>
+
+<div class='row well'> 
+	<input type="text" class="form-control" ng-model='query' placeholder='Search by Flat/ Name'/>
+      </div> 
+    
+</div>
+
+<div class="panel panel-default row well">
+	  <div class="panel-body">
+	    	<table class="table table-condensed table-hover">
+		<tr>
+			<th>Name</th>
+			<th>Flat no.</th>
+			<th>Address</th>
+			<th>Year</th>
+			<th>Month</th>
+			<th>Monthly charges</th>
+			<th>Sinking Fund</th>
+			<th>Parking charges</th>
+			<th>NOC</th>
+			<th>Fine</th>
+			<th>Miscellaneous charges</th>
+			<th>Grand total</th>
+
+
+		</tr>
+		<tr ng-repeat="item in noticeValues |filter :query:strict | orderBy:'year'">
+			<td>{{item.name}}</td>
+			<td>{{item.flat}}</td>
+			<td>{{item.address}}</td>
+			<td>{{item.month}}</td>
+			<td>{{item.year}}</td>
+			<td>{{item.total1}}</td>
+			<td>{{item.total2}}</td>
+			<td>{{item.total3}}</td>
+			<td>{{item.total4}}</td>
+			<td>{{item.total5}}</td>
+			<td>{{item.total6}}</td>
+			<td>{{item.gtotal}}</td>
+		</tr>
+		
+		</table>
+	  </div>
+	</div>
+
+</div>
